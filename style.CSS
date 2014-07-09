@@ -1,0 +1,61 @@
+#wrapper {
+	margin: 300px;
+	-webkit-perspective: 9000px;
+	-webkit-transform-style: preserve-3d;
+
+	-webkit-animation-name: rotation;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear; 
+    
+
+
+}
+#cube {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	-webkit-transform-origin: 50% 50% -50px;
+	-webkit-transform-style: preserve-3d;
+}
+.side {
+	width: 100px;
+	height: 100px;
+	background: rgba(0,0,0,.3);
+	position: absolute;
+	-webkit-transform-origin: 50% 50% -50px;
+	border: 10px solid blue;
+	border-radius: 10px;
+	box-shadow:0 0 10px blue;
+}
+#side2 {
+	-webkit-transform: rotateY(90deg);
+}
+#side3 {
+	-webkit-transform: rotateY(-90deg);
+}
+#side4 {
+	-webkit-transform: rotateX(90deg);
+}
+#side5 {
+	-webkit-transform: rotateX(-90deg);
+}
+#side6 {
+	-webkit-transform: rotateY(180deg);
+}
+
+#cube {
+	-webkit-animation-name: rotation;
+    -webkit-animation-duration: 6000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear; 
+}
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform:rotate3d(1,1,1,0deg);
+    }
+    to {
+        -webkit-transform:rotate3d(1,1,1,360deg);
+    }
+}
+
